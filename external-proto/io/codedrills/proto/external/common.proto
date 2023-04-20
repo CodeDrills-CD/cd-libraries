@@ -1,0 +1,24 @@
+syntax = "proto3";
+package io.codedrills.proto.external;
+
+option java_multiple_files = true;
+
+enum ProgrammingLanguage {
+  PROGRAMMING_LANGUAGE_UNKNOWN = 0;
+  JAVA = 1;
+  CPP = 2;
+  PYTHON = 3;
+  KOTLIN = 4;
+}
+
+enum ScoringStatus {
+  NOT_ATTEMPTED = 0;
+  SOLVED = 1;
+  PARTIALLY_SOLVED = 2;
+  PROCESSING = 3;
+}
+
+message LanguageRestriction {
+  repeated ProgrammingLanguage allowed_language = 1;
+  repeated ProgrammingLanguage disallowed_language = 2;
+}

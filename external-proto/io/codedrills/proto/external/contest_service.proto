@@ -1,0 +1,22 @@
+syntax = "proto3";
+package io.codedrills.proto.external;
+
+option java_multiple_files = true;
+
+import "io/codedrills/proto/external/scoreboard.proto";
+
+message GetScoreboardRequest {
+  oneof id {
+    int32 contest_id = 1;
+    string contest_url = 2;
+  }
+}
+
+message GetScoreboardResponse {
+  Scoreboard scoreboard = 1;
+}
+
+
+service ContestService {
+  rpc GetScoreboard (GetScoreboardRequest) returns (GetScoreboardResponse);
+}
