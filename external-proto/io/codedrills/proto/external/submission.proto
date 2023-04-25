@@ -3,7 +3,7 @@ package io.codedrills.proto.external;
 
 option java_multiple_files = true;
 
-import "io/codedrills/proto/external/common.proto";
+import "common.proto";
 
 message Submission {
   int32 id = 1;

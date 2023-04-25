@@ -3,11 +3,11 @@ package io.codedrills.proto.external;
 
 option java_multiple_files = true;
 
-import "io/codedrills/proto/external/common.proto";
-import "io/codedrills/proto/external/contest.proto";
-import "io/codedrills/proto/external/problem.proto";
-import "io/codedrills/proto/external/submission.proto";
-import "io/codedrills/proto/external/team.proto";
+import "common.proto";
+import "contest.proto";
+import "problem.proto";
+import "submission.proto";
+import "team.proto";
 
 message Scoreboard {
   Contest contest = 1;

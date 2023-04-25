@@ -3,7 +3,7 @@ package io.codedrills.proto.external;
 
 option java_multiple_files = true;
 
-import "io/codedrills/proto/external/scoreboard.proto";
+import "scoreboard.proto";
 
 message GetScoreboardRequest {
   oneof id {
