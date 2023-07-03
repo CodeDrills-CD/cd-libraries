@@ -22,3 +22,24 @@ message LanguageRestriction {
   repeated ProgrammingLanguage allowed_language = 1;
   repeated ProgrammingLanguage disallowed_language = 2;
 }
+
+message ContestId {
+  oneof uid {
+    int32 id = 1;
+    string url = 2;
+  }
+}
+
+message PaginationRequestParams {
+  int32 page_index = 1;
+  int32 items_per_page = 2;
+}
+
+message PaginationResponseParams {
+  PaginationRequestParams request_params = 1;
+  int32 total = 2;
+}
+
+message FilterParams {
+  int32 after_submission = 1;
+}
