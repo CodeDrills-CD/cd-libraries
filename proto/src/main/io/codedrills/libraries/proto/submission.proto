@@ -13,6 +13,8 @@ message Submission {
   SubmissionVerdict verdict = 5;
   int64 submitted_on = 6;
   double score = 7;
+  string submitted_by = 8;
+  int32 problem_id = 9;
 }
 
 enum SubmissionVerdict {
